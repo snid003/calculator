@@ -1,6 +1,11 @@
 package com.snid003.calculator;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
+
+/**
+ *dududu
+ *@author kimchi
+ */
 public class CalculatorTest {
 	private Calculator calculator = new Calculator();
 

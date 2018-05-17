@@ -46,7 +46,7 @@ pipeline {
 	}
 	stage ("Docker build") {
 		steps {
-			sh "docker build -t localhost:5000/kimchi/calculator ."
+			sh "docker build -t localhost:5000/snid003/calculator ."
 		}
 	}
     }

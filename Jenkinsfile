@@ -49,5 +49,11 @@ pipeline {
 			sh "docker build -t localhost:5000/kimchi/calculator ."
 		}
 	}
+	stage("Docker push") {
+		steps {
+			sh "docker push localhost:5000/kimchi/calculator"
+		}
+	}
+
     }
 }

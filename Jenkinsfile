@@ -26,6 +26,7 @@ pipeline {
                     ])
                     sh "./gradlew jacocoTestCoverageVerification"
                 sh "./gradlew jacocoTestCoverageVerification"
+//dasd
             }
         }
         stage("Static code analysis") {
@@ -38,5 +39,15 @@ pipeline {
                 ])
             }
         }
+	stage ("Package") {
+		steps {
+			sh "./gradlew build"
+		}
+	}
+	stage ("Docker build") {
+		steps {
+			sh "docker build -t localhost:5000/kimchi/calculator ."
+		}
+	}
     }
 }

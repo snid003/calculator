@@ -62,6 +62,18 @@ pipeline {
 		}
 	}
 	
+	stage (Accepatance test") {
+		steps {
+			sleep 60
+			sh "./acceptance_test.sh"
+		}
+	}	
 
     }
+    post {
+	always {
+	   sh "docker stop calculator"
+	}
+    }
+
 }

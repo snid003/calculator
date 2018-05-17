@@ -50,6 +50,12 @@ pipeline {
 		}
 	}
 
+	stage ("Docker push") {
+		steps {
+			sh "docker push localhost:5000/kimchi/calculator"
+		}
+	}
+
 	stage ("Deploy to staging") {
 		steps {
 		sh "docker run -d --rm -p 8765:8080 \

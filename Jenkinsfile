@@ -62,7 +62,7 @@ pipeline {
 		}
 	}
 	
-	stage (Accepatance test") {
+	stage ("Accepatance test") {
 		steps {
 			sleep 60
 			sh "./acceptance_test.sh"
